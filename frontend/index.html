@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Inclusion du fichier css pour le style du jeu -->
+    <link rel="stylesheet" href="style/style.css">
 
+    <!-- Inclusion des 3 scripts nécessaires pour faire fonctionner le jeu -->
+    <!-- Attention, l'ordre des fichiers js est important.  -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>E-learning PEGASE</h1>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li class="nav-section-title">INTRODUCTION</li>
+        <li><a onclick="showSection('lecon1')">Leçon 1 : Paramètres généraux</a></li>
+        <li><a onclick="showSection('lecon2')">Leçon 2 : Plan analytique</a></li>
+        <li><span id="score-intro">Avancement : 0/2</span></li>
+
+        <li class="nav-section-title">ETAPE 1 : CREATION BUDGET</li>
+        <li><a onclick="showSection('lecon3')">Leçon 1 : Création chantier</a></li>
+        <li><a onclick="showSection('lecon4')">Leçon 2 : Budget -1/Budget 0</a></li>
+        <li><a onclick="showSection('lecon5')">Leçon 3 : Création arborescence</a></li>
+        <li><a onclick="showSection('lecon6')">Leçon 4 : Création ressources</a></li>
+        <li><a onclick="showSection('lecon7')">Leçon 5 : Duplication de chapitre</a></li>
+        <li><span id="score-budget">Avancement : 0/5</span></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- ✅ Bloc score général supprimé ici -->
+
+      <section id="lecon1" class="content-section active">
+        <h3>Leçon 1 : Paramètres généraux</h3>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <div class="formulaire">
+          <button onclick="marquerTermine(this)" data-chapitre="intro">J'ai terminé cette leçon</button>
+        </div>
+      </section>
+
+      <section id="lecon2" class="content-section">
+        <h3>Leçon 2 : Plan analytique</h3>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <div class="formulaire">
+          <button onclick="marquerTermine(this)" data-chapitre="intro">J'ai terminé cette leçon</button>
+        </div>
+      </section>
+
+      <!-- ... autres sections inchangées ... -->
+    </main>
+  </div>
